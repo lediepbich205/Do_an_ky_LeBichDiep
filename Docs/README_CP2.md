@@ -47,16 +47,11 @@ Xây dựng hệ thống Web App **NutriLife** cho phép người dùng:
 | **F-01** | Đăng ký tài khoản | Tạo tài khoản mới với username, email, mật khẩu và thông tin thể trạng ban đầu. | User | Cao |
 | **F-02** | Đăng nhập | Xác thực người dùng bằng email/mật khẩu, cấp JWT token. | User, Admin | Cao |
 | **F-03** | Đăng xuất | Hủy phiên làm việc, xóa token phía client. | User, Admin | Trung bình |
-| **F-04** | Quản lý hồ sơ thể trạng | Xem và cập nhật thông tin: tuổi, giới tính, chiều cao, cân nặng, mức vận động, mục tiêu. | User | Cao |
 | **F-05** | Tính toán chỉ số dinh dưỡng | Tự động tính BMR, TDEE, calo mục tiêu và phân bổ macro (Protein/Carb/Fat). | System | Cao |
 | **F-06** | Tra cứu thực phẩm | Tìm kiếm thực phẩm theo từ khóa, hỗ trợ gợi ý tự động (AJAX + Debounce). | User | Cao |
-| **F-07** | Thêm món ăn vào nhật ký | Ghi nhận món ăn vào bữa sáng/trưa/tối/phụ với khối lượng cụ thể (gram). | User | Cao |
-| **F-08** | Xem nhật ký ăn uống | Hiển thị danh sách món ăn theo bữa, tổng calo và macro tích lũy trong ngày. | User | Cao |
 | **F-09** | Chỉnh sửa/Xóa món ăn | Cho phép sửa khối lượng hoặc xóa món khỏi nhật ký ăn uống hằng ngày. | User | Trung bình |
 | **F-10** | Gợi ý thực đơn thông minh | Đề xuất 3–5 thực đơn dựa trên calo và macro còn lại trong ngày. | System | Cao |
-| **F-11** | Xem biểu đồ tiến độ | Hiển thị biểu đồ đường (cân nặng) và biểu đồ cột (calo nạp/tiêu hao) theo tuần/tháng. | User | Cao |
 | **F-12** | Cảnh báo dinh dưỡng | Cảnh báo real-time khi tổng calo vượt quá TDEE cho phép (>100% mục tiêu). | System | Cao |
-| **F-13** | Quản lý thực phẩm | Admin thêm/sửa/xóa thông tin thực phẩm và giá trị dinh dưỡng trong thư viện. | Admin | Cao |
 | **F-14** | Quản lý người dùng | Admin xem danh sách người dùng, vô hiệu hóa tài khoản vi phạm. | Admin | Trung bình |
 | **F-15** | Quản lý thực đơn mẫu | Admin tạo/sửa/xóa các thực đơn mẫu phục vụ gợi ý. | Admin | Trung bình |
 
@@ -84,39 +79,5 @@ Xây dựng hệ thống Web App **NutriLife** cho phép người dùng:
 
 ### 6.1. Sơ đồ Use Case Tổng Quan
 
-```text
-                                  HỆ THỐNG NUTRILIFE
-    ┌───────────────────────────────────────────────────────────────────────────┐
-    │                                                                           │
-    │   ┌────────────────────────┐                 ┌────────────────────────┐   │
-    │   │  UC-01: Đăng ký        │                 │  UC-09: Quản lý        │   │
-    │   └────────────────────────┘                 │        thực phẩm       │   │
-    │   ┌────────────────────────┐                 └────────────────────────┘   │
-    │   │  UC-02: Đăng nhập      │                 ┌────────────────────────┐   │
-    │   └────────────────────────┘                 │  UC-10: Quản lý        │   │
-    │   ┌────────────────────────┐                 │        người dùng      │   │
-    │   │  UC-03: Quản lý hồ sơ  │                 └────────────────────────┘   │
-    │   └────────────────────────┘                                              │
-    │   ┌────────────────────────┐                                              │
-    │   │  UC-04: Tìm kiếm       │                                              │
-    │   │        thực phẩm       │                                              │
-    │   └────────────────────────┘                                              │
-    │   ┌────────────────────────┐                                              │
-    │   │  UC-05: Ghi nhật ký    │                                              │
-    │   │        ăn uống         │                                              │
-    │   └────────────────────────┘                                              │
-    │   ┌────────────────────────┐                                              │
-    │   │  UC-06: Gợi ý thực đơn │                                              │
-    │   └────────────────────────┘                                              │
-    │   ┌────────────────────────┐                                              │
-    │   │  UC-07: Xem biểu đồ    │                                              │
-    │   └────────────────────────┘                                              │
-    │   ┌────────────────────────┐                                              │
-    │   │  UC-08: Cảnh báo       │                                              │
-    │   │        dinh dưỡng      │                                              │
-    │   └────────────────────────┘                                              │
-    │                                                                           │
-    └───────────────────────────────────────────────────────────────────────────┘
-                 ▲                                             ▲
-                 │                                             │
-             [ User ]                                      [ Admin ]
+admin: quản lý thực phẩm, quản lý người dùng, đăng nhập, quản lý thực đơn
+người dùng: đăng ký, đăng nhập, chọn thực đơn, nhận cảnh báo

@@ -46,7 +46,7 @@ Từ thực trạng đó, dự án **NutriLife** được xây dựng nhằm cun
 
 ---
 
-## 4. Phương Pháp Nghiên Cứu Và Công Nghệ Sử Dụng
+## 4. Phương Pháp Nghiên Cứu Và Công Nghệ Sử Dụng.
 
 ### 4.1. Phương pháp nghiên cứu
 - **Phương pháp thu thập thông tin:** Khảo sát thực trạng nhu cầu kiểm soát calo và phân tích các giải pháp hiện có.
